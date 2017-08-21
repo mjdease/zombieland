@@ -99,15 +99,7 @@ namespace ZombieLand
 
 		public int GetMaxZombieCount()
 		{
-			if (map == null || map.mapPawns == null) return 0;
-			if (Constants.DEBUG_MAX_ZOMBIE_COUNT >= 0) return Constants.DEBUG_MAX_ZOMBIE_COUNT;
-			var colonists = Tools.CapableColonists(map);
-			var perColonistZombieCount = GenMath.LerpDouble(0f, 4f, 5, 30, (float)Math.Min(4, Math.Sqrt(colonists)));
-			var colonistMultiplier = Math.Sqrt(colonists) * 2;
-			var baseStrengthFactor = GenMath.LerpDouble(0, 1000, 1f, 4f, Math.Min(1000, currentColonyPoints));
-			var difficultyMultiplier = Find.Storyteller.difficulty.threatScale;
-			var count = (int)(perColonistZombieCount * colonistMultiplier * baseStrengthFactor * difficultyMultiplier);
-			return Math.Min(ZombieSettings.Values.maximumNumberOfZombies, count);
+			return ZombieSettings.Values.maximumNumberOfZombies;
 		}
 
 		public void ZombieTicking()
