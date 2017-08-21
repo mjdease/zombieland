@@ -3,10 +3,10 @@ SETLOCAL
 
 SET FOLDERS_TO_COPY=(About Assemblies Defs Languages Sounds Textures)
 SET SOLUTION_DIR=%~2
-SET TARGET_DIR=D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Zombieland\
+SET TARGET_DIR=C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Zombieland\
 
-SET MONO_EXE="C:\Program Files (x86)\Mono-4\bin\mono.exe"
-SET PDB2MDB_PATH="C:\Program Files (x86)\Mono-4\lib\mono\4.5\pdb2mdb.exe"
+SET MONO_EXE="C:\Program Files (x86)\Mono\bin\mono.exe"
+SET PDB2MDB_PATH="C:\Program Files (x86)\Mono\lib\mono\4.5\pdb2mdb.exe"
 
 SET HARMONY_PATH="%SOLUTION_DIR%2Assemblies\0Harmony.dll"
 SET MOD_DLL_PATH="%SOLUTION_DIR%Assemblies\%~3"
